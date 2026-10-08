@@ -37,6 +37,54 @@
 <h2>I'm running out of space</h2>
 <p>In the Library, press and hold a project and choose Storage. Reclaim Previews frees space without changing anything you see. Reclaim Rendered Cuts frees more: it keeps your original and all your settings, and the project's Rebuild button brings the edits back when you want them.</p>
 
+<h2 id="capture-settings">Capture settings explained</h2>
+<p>These are on the settings screen: tap the gear at the top left of the camera. The three sections below are named as they appear there.</p>
+
+<h3>Exposure modes</h3>
+<ul>
+<li><strong>Smart</strong> (the default): exposure keeps following the light, so a shoot can run from day into night. White balance is locked, so colour can't drift from frame to frame.</li>
+<li><strong>Auto:</strong> the camera re-meters every frame, like the iPhone's own Camera app. Easiest, but brightness can flicker as the light changes.</li>
+<li><strong>Manual:</strong> you set ISO and shutter, and nothing changes unless you change it. You can move the sliders while recording.</li>
+<li><strong>Lock:</strong> freezes exposure, white balance and focus where they are. No flicker, but a shoot through changing light drifts too dark or too bright.</li>
+</ul>
+
+<h3>Smart Mode: Cap ISO</h3>
+<p>ISO is how much the camera amplifies the picture. A higher ISO is brighter but grainier. In Smart, the camera first lengthens the shutter as the light fades, and only raises ISO once the shutter can go no longer.</p>
+<p><strong>Cap ISO</strong> sets a ceiling that ISO will not pass, from 200 to 6400. Use it when you would rather have a clean picture than a bright one.</p>
+<ul>
+<li><strong>What you gain:</strong> less grain in dim light.</li>
+<li><strong>What you give up:</strong> once a scene is darker than the ceiling can cover, the frames come out darker. The ceiling is never quietly ignored.</li>
+<li><strong>Max shutter</strong> (shown when Cap ISO is on): the longest shutter Smart may use. Auto lets it run as long as your interval allows, up to 1 second. A shorter setting keeps moving things sharper, but ISO has to rise sooner, so expect more grain.</li>
+</ul>
+
+<h3>Low Light: Stretch interval in low light</h3>
+<p>Works in Smart and Auto. When it gets dark, the shutter reaches the longest time your interval allows and ISO starts to climb. This setting lengthens the interval a little at a time (5% every 25 frames) so the shutter can stay open longer and ISO stays lower. It eases back to your own interval when the light returns.</p>
+<ul>
+<li><strong>Start above:</strong> the ISO at which stretching begins.</li>
+<li><strong>Max interval:</strong> the longest the interval is allowed to get.</li>
+<li><strong>What you give up:</strong> with more time between frames, night passes faster in the finished video. A speed ramp in Export can slow it back down.</li>
+<li><strong>Stack captures at night</strong> (needs HDR capture off): once ISO passes the start level, each frame becomes a blend of several 1-second captures, and the interval stretches to fit more of them. Four captures roughly halve the grain. <em>Average</em> gives the least noise but thins out anything that moves, such as stars and clouds. <em>Lighten</em> keeps the brightest light from each capture, so stars and light trails stay bright and join up, with a noisier sky.</li>
+<li><strong>Brighten at night:</strong> after sunset the camera lets the picture get darker as the scene does, so night looks like night. This adds some of that brightness back, up to the amount you choose. It means more grain, and it cannot go past Cap ISO.</li>
+</ul>
+<p>With HDR capture on, a Max interval longer than 5 seconds adds nothing. Stretching is not used while Long Exposure is on.</p>
+
+<h3>Long Exposure</h3>
+<p>The iPhone's shutter can stay open for 1 second at most. Long Exposure goes past that by blending several captures into each frame. It is for night skies, aurora and light trails, and it needs a tripod.</p>
+<ul>
+<li><strong>Stack frames:</strong> turns it on. It is off again each time you open the app.</li>
+<li><strong>Exposure:</strong> the total time each frame gathers light, from 2 to 24 seconds. Set this and your interval; the app works out how many captures that takes.</li>
+<li><strong>Blend:</strong> <em>Average</em> lowers noise. <em>Lighten</em> keeps the brightest light from each capture, which suits light trails. For star trails, shoot with Average and add Star Trails when editing.</li>
+<li><strong>Not available while stacking:</strong> RAW, ProRAW, HDR capture and 48 MP.</li>
+</ul>
+
+<h3>Which one should I turn on?</h3>
+<ul>
+<li><strong>Less grain, and a darker night is fine:</strong> Cap ISO.</li>
+<li><strong>Less grain, and night passing faster is fine:</strong> Stretch interval in low light, with Stack captures at night for more.</li>
+<li><strong>A brighter night:</strong> Brighten at night.</li>
+<li><strong>Light trails, aurora, or a shutter longer than 1 second:</strong> Long Exposure.</li>
+</ul>
+
 <nav><a href="privacy.html">Privacy Policy</a> · <a href="https://www.instagram.com/lapsecraftapp">Instagram</a></nav>
 </body>
 </html>
