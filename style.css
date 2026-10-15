@@ -28,6 +28,8 @@ body.home { max-width: 60rem; }
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0 2.5rem; }
 .features section { min-width: 0; }
 .features ul { padding-left: 1.1rem; margin: 0; }
+.watch { display: flex; gap: .6rem; margin: .6rem 0 .2rem; }
+.watch img { width: min(7.5rem, 38vw); height: auto; border-radius: 1.4rem; box-shadow: 0 0 0 1px rgba(128, 128, 128, .35); }
 @media (max-width: 30rem) { .banner { border-radius: 12px; } .home h1 { font-size: 1.7rem; } }
 
 @media (prefers-color-scheme: dark) {
