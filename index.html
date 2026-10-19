@@ -20,6 +20,22 @@
 
 <p class="lead">Shoot for minutes or for hours, fix the flicker, add star trails, and export a finished video, all on your iPhone. No account, and nothing leaves the phone.</p>
 
+<div class="preview">
+  <video autoplay muted loop playsinline controls poster="img/preview-poster.jpg" width="554" height="1200"
+         aria-label="A 29-second tour of LapseCraft: shooting a timelapse of a pond, the Library, Smooth Motion, a speed ramp, star trails, and exporting in 4K HDR.">
+    <source src="video/preview-dark.mp4" type="video/mp4" media="(prefers-color-scheme: dark)">
+    <source src="video/preview-light.mp4" type="video/mp4">
+  </video>
+</div>
+<script>
+  // With Reduce Motion on, the tour waits for its play button.
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const tour = document.querySelector(".preview video");
+    tour.removeAttribute("autoplay");
+    tour.pause();
+  }
+</script>
+
 <p class="look">Light</p>
 <div class="shots">
   <img src="img/1-capture.jpg" width="603" height="1311" alt="The capture screen. Capture timelapses: any interval, from half a second to 24 hours.">
