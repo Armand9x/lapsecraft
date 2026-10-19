@@ -24,6 +24,9 @@ body.home { max-width: 60rem; }
 .look { margin: 2rem 0 0; font-size: .95rem; font-weight: 600; color: #6e6e73; }
 .look + .shots { margin-top: .6rem; margin-bottom: 0; }
 .shots + .features { margin-top: 2rem; }
+/* The search video after the rows, as wide as the banner. */
+.search video { display: block; width: 100%; height: auto; margin: 2.5rem 0 0; border-radius: 18px; background: #000; }
+.search + script + .features { margin-top: 2rem; }
 .shots img { flex: none; width: min(15rem, 62vw); height: auto; border-radius: 14px; scroll-snap-align: center; }
 /* The app preview under the lead, the light or dark one by the visitor's setting. */
 .preview { margin: 2rem 0 0; }

@@ -27,15 +27,6 @@
     <source src="video/preview-light.mp4" type="video/mp4">
   </video>
 </div>
-<script>
-  // With Reduce Motion on, the tour waits for its play button.
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const tour = document.querySelector(".preview video");
-    tour.removeAttribute("autoplay");
-    tour.pause();
-  }
-</script>
-
 <p class="look">Light</p>
 <div class="shots">
   <img src="img/1-capture.jpg" width="603" height="1311" alt="The capture screen. Capture timelapses: any interval, from half a second to 24 hours.">
@@ -59,6 +50,26 @@
   <img src="img/7-export.jpg" width="603" height="1311" loading="lazy" alt="Export in 4K HDR: H.264, H.265 or ProRes, up to 10-bit colour. Shown in dark.">
   <img src="img/8-smooth-motion.jpg" width="603" height="1311" loading="lazy" alt="Smooth Motion. Blend frames so clouds and water turn silky. Shown in dark.">
 </div>
+
+<div class="search">
+  <video autoplay muted loop playsinline controls width="1440" height="960"
+         aria-label="LapseCraft: shoot, edit and export timelapses. Three iPhones in turn: the camera shooting a pond, Edits bringing up a sunset's colour, and a timelapse playing from day into a starry night.">
+    <source src="video/search-dark.mp4" type="video/mp4" media="(prefers-color-scheme: dark)">
+    <source src="video/search-light.mp4" type="video/mp4">
+  </video>
+</div>
+<script>
+  // With Reduce Motion on, the videos wait for their play buttons.
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const video of document.querySelectorAll(".preview video, .search video")) {
+      video.removeAttribute("autoplay");
+      video.pause();
+    }
+  }
+  // The search video's still before it plays, in the same look as the video it shows.
+  document.querySelector(".search video").poster = matchMedia("(prefers-color-scheme: dark)").matches
+    ? "img/search-poster-dark.jpg" : "img/search-poster-light.jpg";
+</script>
 
 <div class="features">
   <section>
