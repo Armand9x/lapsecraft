@@ -7,7 +7,7 @@
 <meta name="description" content="LapseCraft is a timelapse camera and editor for iPhone, with an Apple Watch remote: day-to-night exposure, deflicker, star trails, speed ramps and export up to 6K.">
 <link rel="icon" href="img/icon.png">
 <link rel="apple-touch-icon" href="img/icon.png">
-<link rel="stylesheet" href="style.css?v=2026-10-19">
+<link rel="stylesheet" href="style.css?v=2026-10-20">
 </head>
 <body class="home">
 <picture>
@@ -19,57 +19,6 @@
 <p class="sub">For iPhone · Coming soon to the App Store</p>
 
 <p class="lead">Shoot for minutes or for hours, fix the flicker, add star trails, and export a finished video, all on your iPhone. No account, and nothing leaves the phone.</p>
-
-<div class="preview">
-  <video autoplay muted loop playsinline controls poster="img/preview-poster.jpg" width="554" height="1200"
-         aria-label="A 29-second tour of LapseCraft: shooting a timelapse of a pond, the Library, Smooth Motion, a speed ramp, star trails, and exporting in 4K HDR.">
-    <source src="video/preview-dark.mp4" type="video/mp4" media="(prefers-color-scheme: dark)">
-    <source src="video/preview-light.mp4" type="video/mp4">
-  </video>
-</div>
-<p class="look">Light</p>
-<div class="shots">
-  <img src="img/1-capture.jpg" width="603" height="1311" alt="The capture screen. Capture timelapses: any interval, from half a second to 24 hours.">
-  <img src="img/light-2-batch-edit.jpg" width="603" height="1311" loading="lazy" alt="Edits. Grade every frame: one set of sliders edits the entire shoot. Shown in light.">
-  <img src="img/light-3-star-trails.jpg" width="603" height="1311" loading="lazy" alt="Star Trails. Stack photos to turn the night sky into streaks of light. Shown in light.">
-  <img src="img/light-4-deflicker.jpg" width="603" height="1311" loading="lazy" alt="Deflicker. Fix the flicker: even out the exposure across a whole shoot. Shown in light.">
-  <img src="img/light-5-speed-ramp.jpg" width="603" height="1311" loading="lazy" alt="Speed Ramp. Change the playback speed with presets or custom values. Shown in light.">
-  <img src="img/light-6-library.jpg" width="603" height="1311" loading="lazy" alt="The Library. All your shoots, organized in one place. Shown in light.">
-  <img src="img/light-7-export.jpg" width="603" height="1311" loading="lazy" alt="Export in 4K HDR: H.264, H.265 or ProRes, up to 10-bit colour. Shown in light.">
-  <img src="img/light-8-smooth-motion.jpg" width="603" height="1311" loading="lazy" alt="Smooth Motion. Blend frames so clouds and water turn silky. Shown in light.">
-</div>
-
-<p class="look">Dark</p>
-<div class="shots">
-  <img src="img/1-capture.jpg" width="603" height="1311" loading="lazy" alt="The capture screen. Capture timelapses: any interval, from half a second to 24 hours. The camera is dark in both.">
-  <img src="img/2-batch-edit.jpg" width="603" height="1311" loading="lazy" alt="Edits. Grade every frame: one set of sliders edits the entire shoot. Shown in dark.">
-  <img src="img/3-star-trails.jpg" width="603" height="1311" loading="lazy" alt="Star Trails. Stack photos to turn the night sky into streaks of light. Shown in dark.">
-  <img src="img/4-deflicker.jpg" width="603" height="1311" loading="lazy" alt="Deflicker. Fix the flicker: even out the exposure across a whole shoot. Shown in dark.">
-  <img src="img/5-speed-ramp.jpg" width="603" height="1311" loading="lazy" alt="Speed Ramp. Change the playback speed with presets or custom values. Shown in dark.">
-  <img src="img/6-library.jpg" width="603" height="1311" loading="lazy" alt="The Library. All your shoots, organized in one place. Shown in dark.">
-  <img src="img/7-export.jpg" width="603" height="1311" loading="lazy" alt="Export in 4K HDR: H.264, H.265 or ProRes, up to 10-bit colour. Shown in dark.">
-  <img src="img/8-smooth-motion.jpg" width="603" height="1311" loading="lazy" alt="Smooth Motion. Blend frames so clouds and water turn silky. Shown in dark.">
-</div>
-
-<div class="search">
-  <video autoplay muted loop playsinline controls width="1440" height="960"
-         aria-label="LapseCraft: shoot, edit and export timelapses. Three iPhones in turn: the camera shooting a pond, Edits bringing up a sunset's colour, and a timelapse playing from day into a starry night.">
-    <source src="video/search-dark.mp4" type="video/mp4" media="(prefers-color-scheme: dark)">
-    <source src="video/search-light.mp4" type="video/mp4">
-  </video>
-</div>
-<script>
-  // With Reduce Motion on, the videos wait for their play buttons.
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    for (const video of document.querySelectorAll(".preview video, .search video")) {
-      video.removeAttribute("autoplay");
-      video.pause();
-    }
-  }
-  // The search video's still before it plays, in the same look as the video it shows.
-  document.querySelector(".search video").poster = matchMedia("(prefers-color-scheme: dark)").matches
-    ? "img/search-poster-dark.jpg" : "img/search-poster-light.jpg";
-</script>
 
 <div class="features">
   <section>
@@ -114,6 +63,50 @@
 
 <h2>What you need</h2>
 <p>An iPhone with iOS 18 or later. RAW, ProRAW, 48 MP and HDR capture appear on the iPhones that support them. The Apple Watch remote needs watchOS 11 or later.</p>
+
+<div class="search">
+  <video autoplay muted loop playsinline controls width="1440" height="960"
+         aria-label="LapseCraft: shoot, edit and export timelapses. Three iPhones in turn: the camera shooting a pond, Edits bringing up a sunset's colour, and a timelapse playing from day into a starry night.">
+    <source src="video/search-dark.mp4" type="video/mp4" media="(prefers-color-scheme: dark)">
+    <source src="video/search-light.mp4" type="video/mp4">
+  </video>
+</div>
+<script>
+  // With Reduce Motion on, the video waits for its play button.
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    for (const video of document.querySelectorAll(".search video")) {
+      video.removeAttribute("autoplay");
+      video.pause();
+    }
+  }
+  // The search video's still before it plays, in the same look as the video it shows.
+  document.querySelector(".search video").poster = matchMedia("(prefers-color-scheme: dark)").matches
+    ? "img/search-poster-dark.jpg" : "img/search-poster-light.jpg";
+</script>
+
+<p class="look">Light</p>
+<div class="shots">
+  <img src="img/1-capture.jpg" width="603" height="1311" alt="The capture screen. Capture timelapses: any interval, from half a second to 24 hours.">
+  <img src="img/light-2-batch-edit.jpg" width="603" height="1311" loading="lazy" alt="Edits. Grade every frame: one set of sliders edits the entire shoot. Shown in light.">
+  <img src="img/light-3-star-trails.jpg" width="603" height="1311" loading="lazy" alt="Star Trails. Stack photos to turn the night sky into streaks of light. Shown in light.">
+  <img src="img/light-4-deflicker.jpg" width="603" height="1311" loading="lazy" alt="Deflicker. Fix the flicker: even out the exposure across a whole shoot. Shown in light.">
+  <img src="img/light-5-speed-ramp.jpg" width="603" height="1311" loading="lazy" alt="Speed Ramp. Change the playback speed with presets or custom values. Shown in light.">
+  <img src="img/light-6-library.jpg" width="603" height="1311" loading="lazy" alt="The Library. All your shoots, organized in one place. Shown in light.">
+  <img src="img/light-7-export.jpg" width="603" height="1311" loading="lazy" alt="Export in 4K HDR: H.264, H.265 or ProRes, up to 10-bit colour. Shown in light.">
+  <img src="img/light-8-smooth-motion.jpg" width="603" height="1311" loading="lazy" alt="Smooth Motion. Blend frames so clouds and water turn silky. Shown in light.">
+</div>
+
+<p class="look">Dark</p>
+<div class="shots">
+  <img src="img/1-capture.jpg" width="603" height="1311" loading="lazy" alt="The capture screen. Capture timelapses: any interval, from half a second to 24 hours. The camera is dark in both.">
+  <img src="img/2-batch-edit.jpg" width="603" height="1311" loading="lazy" alt="Edits. Grade every frame: one set of sliders edits the entire shoot. Shown in dark.">
+  <img src="img/3-star-trails.jpg" width="603" height="1311" loading="lazy" alt="Star Trails. Stack photos to turn the night sky into streaks of light. Shown in dark.">
+  <img src="img/4-deflicker.jpg" width="603" height="1311" loading="lazy" alt="Deflicker. Fix the flicker: even out the exposure across a whole shoot. Shown in dark.">
+  <img src="img/5-speed-ramp.jpg" width="603" height="1311" loading="lazy" alt="Speed Ramp. Change the playback speed with presets or custom values. Shown in dark.">
+  <img src="img/6-library.jpg" width="603" height="1311" loading="lazy" alt="The Library. All your shoots, organized in one place. Shown in dark.">
+  <img src="img/7-export.jpg" width="603" height="1311" loading="lazy" alt="Export in 4K HDR: H.264, H.265 or ProRes, up to 10-bit colour. Shown in dark.">
+  <img src="img/8-smooth-motion.jpg" width="603" height="1311" loading="lazy" alt="Smooth Motion. Blend frames so clouds and water turn silky. Shown in dark.">
+</div>
 
 <nav><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="https://www.instagram.com/lapsecraftapp">Instagram</a></nav>
 </body>
