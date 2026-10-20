@@ -22,7 +22,7 @@ body.home { max-width: 60rem; }
 /* Two rows of screenshots, the app in light and in dark, each under its name. */
 .look { margin: 2rem 0 0; font-size: .95rem; font-weight: 600; color: #6e6e73; }
 .look + .shots { margin-top: .6rem; margin-bottom: 0; }
-/* The search video at the top, where the banner was; the two rows under the lead (D-685). */
+/* The search video at the top, where the banner was (D-685); the two rows after the features (D-686). */
 .search video { display: block; width: 100%; height: auto; margin: 0 0 2rem; border-radius: 18px; background: #000; }
 .shots img { flex: none; width: min(15rem, 62vw); height: auto; border-radius: 14px; scroll-snap-align: center; }
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0 2.5rem; }
