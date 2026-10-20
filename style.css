@@ -13,9 +13,8 @@ ul { padding-left: 1.2rem; }
 a { color: #0066cc; }
 nav { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d2d2d7; font-size: .95rem; }
 
-/* The home page: wider, with the banner, the screenshots and three columns. */
+/* The home page: wider, with the search video, the screenshots and three columns. */
 body.home { max-width: 60rem; }
-.banner { display: block; width: 100%; height: auto; border-radius: 18px; margin: 0 0 2rem; }
 .home h1 { font-size: 2.1rem; text-wrap: balance; }
 .lead { font-size: 1.15rem; max-width: 40rem; }
 .shots { display: flex; gap: 1rem; overflow-x: auto; margin: 2rem -1.25rem; padding: 0 1.25rem .75rem;
@@ -23,15 +22,15 @@ body.home { max-width: 60rem; }
 /* Two rows of screenshots, the app in light and in dark, each under its name. */
 .look { margin: 2rem 0 0; font-size: .95rem; font-weight: 600; color: #6e6e73; }
 .look + .shots { margin-top: .6rem; margin-bottom: 0; }
-/* The search video after the words, as wide as the banner, then the two rows (D-678). */
-.search video { display: block; width: 100%; height: auto; margin: 2.5rem 0 0; border-radius: 18px; background: #000; }
+/* The search video at the top, where the banner was; the two rows under the lead (D-685). */
+.search video { display: block; width: 100%; height: auto; margin: 0 0 2rem; border-radius: 18px; background: #000; }
 .shots img { flex: none; width: min(15rem, 62vw); height: auto; border-radius: 14px; scroll-snap-align: center; }
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0 2.5rem; }
 .features section { min-width: 0; }
 .features ul { padding-left: 1.1rem; margin: 0; }
 .watch { display: flex; gap: .6rem; margin: .6rem 0 .2rem; }
 .watch img { width: min(7.5rem, 38vw); height: auto; border-radius: 1.4rem; box-shadow: 0 0 0 1px rgba(128, 128, 128, .35); }
-@media (max-width: 30rem) { .banner { border-radius: 12px; } .home h1 { font-size: 1.7rem; } }
+@media (max-width: 30rem) { .search video { border-radius: 12px; } .home h1 { font-size: 1.7rem; } }
 
 @media (prefers-color-scheme: dark) {
   body { background: #000; color: #f5f5f7; }
