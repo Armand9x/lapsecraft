@@ -25,7 +25,6 @@ body.home { max-width: 60rem; }
 /* The search video at the top, where the banner was (D-685); the two rows after the features (D-686). */
 .search video { display: block; width: 100%; height: auto; margin: 0 0 2rem; border-radius: 18px; background: #000; }
 /* The eight screens on one sheet, light or dark, before the two rows (D-688). */
-.overview img { display: block; width: 100%; height: auto; margin: 2.5rem 0 0; border-radius: 10px; }
 .shots img { flex: none; width: min(15rem, 62vw); height: auto; border-radius: 14px; scroll-snap-align: center; }
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 0 2.5rem; }
 .features section { min-width: 0; }
